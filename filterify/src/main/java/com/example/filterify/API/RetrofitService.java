@@ -19,5 +19,5 @@ public interface RetrofitService {
 
     @Headers("Content-Type: application/json")
     @POST("/apply_filters")
-    Call<ImageData> applyFilters(@Body ImageData bytes, @Query("filters") String filters);
+    Call<ImageData> applyFilters(@Body ImageData bytes, @Query("filters") List<String> filters);
 }
